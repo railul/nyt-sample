@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-masthead: "UnifrakturMaguntia", Georgia, serif;
+  --font-headline: "Playfair Display", Georgia, serif;
+  --font-body-serif: "Merriweather", Georgia, serif;
+  --font-sans-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --color-nyt-black: #121212;
+  --color-nyt-dark-grey: #363636;
+  --color-nyt-mid-grey: #666666;
+  --color-nyt-light-grey: #888888;
+  --color-nyt-border: #e2e2e2;
+  --color-nyt-border-dark: #121212;
+  --color-nyt-blue: #326891;
+  --color-nyt-blue-hover: #254e6d;
+}
+
+@layer base {
+  body {
+    color: #121212;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Traditional NYT Double-line Border */
+.border-double-bottom {
+  border-bottom: 3px double #121212;
+}
+
+.border-double-top {
+  border-top: 3px double #121212;
+}
+
+/* Small hairline column divider */
+.column-border-r {
+  border-right: 1px solid #e2e2e2;
+}
+
+.column-border-b {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+/* Micro-typography adjustments */
+.headline-tight {
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.meta-tracking {
+  letter-spacing: 0.05em;
+}
+
+/* Drop cap for editorial reading experience */
+.editorial-drop-cap::first-letter {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3.8rem;
+  line-height: 0.85;
+  float: left;
+  margin-top: 0.15rem;
+  margin-right: 0.65rem;
+  font-weight: 700;
+  color: #121212;
+}
